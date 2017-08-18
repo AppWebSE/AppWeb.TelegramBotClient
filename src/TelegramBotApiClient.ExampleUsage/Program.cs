@@ -28,7 +28,7 @@ namespace TelegramBotApiClient.ExampleUsage
             var accessToken = Configuration["Settings:accessToken"];
             int chatId = int.Parse(Configuration["Settings:chatId"]);
 
-            ITelegramBotAPIClient _apiClient = new TelegramBotAPIClient.TelegramBotAPIClient(accessToken);
+            ITelegramClient _apiClient = new TelegramClient(accessToken);
 
             Console.WriteLine("Started");
 

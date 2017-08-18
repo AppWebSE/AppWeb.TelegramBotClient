@@ -1,10 +1,10 @@
 ﻿namespace TelegramBotAPIClient.Configurations
 {
-    public class TelegramBotAPIClientConfiguration
+    public class TelegramClientConfiguration
     {
         public string AuthenticationToken { get; private set; }
         
-        public TelegramBotAPIClientConfiguration(string authenticationToken)
+        public TelegramClientConfiguration(string authenticationToken)
         {
             AuthenticationToken = authenticationToken;
         }

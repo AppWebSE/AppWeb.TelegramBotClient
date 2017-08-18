@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace TelegramBotAPIClient
 {
-    public class TelegramBotAPIClient : ITelegramBotAPIClient
+    public class TelegramClient : ITelegramClient
     {
         private readonly IHttpService _httpService;
         private static readonly JsonSerializerSettings SerializerSettings = new JsonSerializerSettings
@@ -21,16 +21,16 @@ namespace TelegramBotAPIClient
                 new UnixDateTimeConverter()
             }
         };
-        public TelegramBotAPIClientConfiguration Configuration;
+        public TelegramClientConfiguration Configuration;
 
-        public TelegramBotAPIClient(string authenticationToken)
+        public TelegramClient(string authenticationToken)
         {
             if (!Regex.IsMatch(authenticationToken, @"^\d*:[\w\d-_]{35}$"))
                 throw new ArgumentException("Invalid token format", nameof(authenticationToken));
 
             string apiBaseUrl = $"https://api.telegram.org/bot{authenticationToken}";
             _httpService = new HttpService(apiBaseUrl, SerializerSettings);
-            Configuration = new TelegramBotAPIClientConfiguration(authenticationToken);
+            Configuration = new TelegramClientConfiguration(authenticationToken);
         }
         
         public Message SendMessage(int chat_id, string text)
