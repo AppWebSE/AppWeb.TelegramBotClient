@@ -2,3 +2,4 @@
 /src/.vs/**/*
 /src/*/bin/*
 /src/*/obj/*
+/src/TelegramBotApiClient.ExampleUsage/appsettings.json
