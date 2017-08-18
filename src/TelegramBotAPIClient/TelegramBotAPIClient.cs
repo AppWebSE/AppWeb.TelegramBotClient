@@ -1,18 +1,32 @@
 ﻿using System;
-using TelegramBotAPIClient.Service;
+using TelegramBotAPIClient.Services;
+using TelegramBotAPIClient.Configurations;
+using System.Net.Http;
 
 namespace TelegramBotAPIClient
 {
     public class TelegramBotAPIClient : ITelegramBotAPIClient
     {
-        IHttpService _httpService;
+        private readonly IHttpService _httpService;
 
-        public TelegramBotAPIClient(IHttpService httpService)
+        public TelegramBotAPIClientConfiguration Configuration;
+
+        public TelegramBotAPIClient(string authenticationToken)
         {
-            httpService = _httpService;
+            string apiBaseUrl = $"https://api.telegram.org/bot{authenticationToken}";
+            _httpService = new HttpService(apiBaseUrl);
+            Configuration = new TelegramBotAPIClientConfiguration(authenticationToken);
         }
 
-        // todo: implementations
+        public bool SendMessage(int chat_id, string text)
+        {
+            if (string.IsNullOrEmpty(text)) throw new Exception("");
+
+            object response = _httpService.GetWebApi<object>($"/sendMessage?chat_id={chat_id}&text={text}");
+
+            return true;
+        }
+        
 
     }
 }

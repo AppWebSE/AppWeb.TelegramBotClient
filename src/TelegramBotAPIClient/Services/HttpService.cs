@@ -5,17 +5,17 @@ using System.Net.Http;
 using System.Text;
 using TelegramBotAPIClient.Exceptions;
 
-namespace TelegramBotAPIClient.Service
+namespace TelegramBotAPIClient.Services
 {
     public class HttpService : IHttpService, IDisposable
     {
         private readonly string _baseUrl;
         private readonly HttpClient _httpClient;
 
-        public HttpService(HttpClient httpClient, string baseUrl)
+        public HttpService( string baseUrl)
         {
-            _httpClient = httpClient;
-            _baseUrl = baseUrl.TrimEnd('/') + "/";
+            _httpClient = new HttpClient();
+            _baseUrl = baseUrl.TrimEnd('/');
         }
         
         public T GetWebApi<T>(string apiUrl)

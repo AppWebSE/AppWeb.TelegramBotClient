@@ -6,5 +6,6 @@ namespace TelegramBotAPIClient
 {
     public interface ITelegramBotAPIClient
     {
+        bool SendMessage(int chat_id, string text);
     }
 }
