@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using TelegramBotAPIClient.Models;
 
 namespace TelegramBotAPIClient
 {
     public interface ITelegramBotAPIClient
     {
-        bool SendMessage(int chat_id, string text);
+        Message SendMessage(int chat_id, string text);
     }
 }

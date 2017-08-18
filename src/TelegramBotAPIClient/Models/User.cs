@@ -1,37 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
 
 namespace TelegramBotAPIClient.Models
 {
     /// <summary>
     /// Model representing https://core.telegram.org/bots/api#user
+    /// This object represents a Telegram user or bot.
     /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
     public class User
     {
         /// <summary>
-        /// Integer, Unique identifier for this user or bot
+        /// Unique identifier for this user or bot
         /// </summary>
-        int id { get; set; }
+        /// <returns></returns>
+        [JsonProperty(PropertyName = "id", Required = Required.Always)]
+        public int Id { get; set; }
 
         /// <summary>
-        /// String, User‘s or bot’s first name
+        /// User's or bot's first name
         /// </summary>
-        string first_name { get; set; }
+        [JsonProperty(PropertyName = "first_name", Required = Required.Always)]
+        public string FirstName { get; set; }
 
         /// <summary>
-        /// String, Optional.User‘s or bot’s last name
+        /// Optional. User's or bot's last name
         /// </summary>
-        string last_name { get; set; }
+        [JsonProperty(PropertyName = "last_name", Required = Required.Default)]
+        public string LastName { get; set; }
 
         /// <summary>
-        /// String, Optional. User‘s or bot’s username
+        /// Optional. User's or bot's username
         /// </summary>
-        string username { get; set; }
+        [JsonProperty(PropertyName = "username", Required = Required.Default)]
+        public string Username { get; set; }
 
         /// <summary>
-        /// String,	Optional. IETF language tag of the user's language
+        /// Optional. IETF language tag of the user's language
         /// </summary>
-        string language_code { get; set; } 
+        [JsonProperty("language_code")]
+        public string LanguageCode { get; set; }
     }
 }
