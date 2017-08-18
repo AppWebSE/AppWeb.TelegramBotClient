@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBotAPIClient", "TelegramBotAPIClient\TelegramBotAPIClient.csproj", "{7B546984-8C4E-4D34-8B31-9235148DA5B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotApiClient.ExampleUsage", "TelegramBotApiClient.ExampleUsage\TelegramBotApiClient.ExampleUsage.csproj", "{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBotApiClient.ExampleUsage", "TelegramBotApiClient.ExampleUsage\TelegramBotApiClient.ExampleUsage.csproj", "{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotApiClient.Tests", "TelegramBotApiClient.Tests\TelegramBotApiClient.Tests.csproj", "{0245AED0-B2D8-4178-89D3-7AA80AE60735}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0245AED0-B2D8-4178-89D3-7AA80AE60735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0245AED0-B2D8-4178-89D3-7AA80AE60735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0245AED0-B2D8-4178-89D3-7AA80AE60735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0245AED0-B2D8-4178-89D3-7AA80AE60735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
