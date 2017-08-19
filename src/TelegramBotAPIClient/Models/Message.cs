@@ -34,5 +34,11 @@ namespace TelegramBotAPIClient.Models
         [JsonProperty("date", Required = Required.Always)]
         [JsonConverter(typeof(UnixDateTimeConverter))]
         public DateTime Date { get; set; }
+
+        /// <summary>
+        /// Optional. Title, for channels and group chats
+        /// </summary>
+        [JsonProperty(PropertyName = "text", Required = Required.Default)]
+        public string Text { get; set; }
     }
 }
