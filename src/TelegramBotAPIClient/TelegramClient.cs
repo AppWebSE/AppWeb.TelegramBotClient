@@ -42,7 +42,7 @@ namespace TelegramBotAPIClient
             return _httpService.GetWebApi<Message>(endpoint);
         }
 
-        public Update[] GetMessages(int? offset, int? limit, int? timeout, UpdateType[] allowedUpdates = null)
+        public Update[] GetUpdates(int? offset, int? limit, int? timeout, UpdateType[] allowedUpdates = null)
         {
             var parameters = new Dictionary<string, object> {
                 { "offset", offset.HasValue ? offset.Value : 0 },
