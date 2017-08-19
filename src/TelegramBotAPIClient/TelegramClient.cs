@@ -3,9 +3,7 @@ using TelegramBotAPIClient.Services;
 using TelegramBotAPIClient.Configurations;
 using TelegramBotAPIClient.Models;
 using System.Text.RegularExpressions;
-using Newtonsoft.Json;
 using System.Collections.Generic;
-using TelegramBotAPIClient.Converters;
 using TelegramBotAPIClient.Enums;
 using System.Linq;
 
@@ -14,14 +12,12 @@ namespace TelegramBotAPIClient
     public class TelegramClient : ITelegramClient
     {
         private readonly IHttpService _httpService;
-        private static readonly JsonSerializerSettings SerializerSettings = new JsonSerializerSettings
-        {
-            Converters = new List<JsonConverter>
-            {
-                new UnixDateTimeConverter()
-            }
-        };
+
         public TelegramClientConfiguration Configuration;
+        public TelegramClientConfiguration GetConfiguration()
+        {
+            return Configuration;
+        }
 
         public TelegramClient(string authenticationToken)
         {
@@ -29,11 +25,11 @@ namespace TelegramBotAPIClient
                 throw new ArgumentException("Invalid token format", nameof(authenticationToken));
 
             string apiBaseUrl = $"https://api.telegram.org/bot{authenticationToken}";
-            _httpService = new HttpService(apiBaseUrl, SerializerSettings);
             Configuration = new TelegramClientConfiguration(authenticationToken);
+            _httpService = new HttpService(apiBaseUrl, TelegramClientConfiguration.SerializerSettings);
         }
         
-        public Message SendMessage(int chat_id, string text)
+        public Message SendMessage(long chat_id, string text)
         {
             if (string.IsNullOrEmpty(text)) throw new Exception("");
 
@@ -57,5 +53,18 @@ namespace TelegramBotAPIClient
             
         }
 
+        public bool SetWebhook(string url, int maxConnections, UpdateType[] allowedUpdates = null)
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                {"url", url},
+                {"max_connections", maxConnections}
+            };
+
+            if (allowedUpdates != null && !allowedUpdates.Contains(UpdateType.All))
+                parameters.Add("allowed_updates", allowedUpdates);
+
+            return _httpService.PostWebApi<bool>(parameters, "/setWebhook");
+        }
     }
 }
