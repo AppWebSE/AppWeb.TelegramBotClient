@@ -14,7 +14,11 @@ You will find Telegram bot api documentation at:
 If '/setWebhook' is used you cannot receive updates through polling '/getUpdates' due to limitations in telegram bot api. You will also have to use a HTTPS connection for your webhook.
 Read more at: https://core.telegram.org/bots/api#setwebhook
 
-## Example code for setting up webhook (In startup.cs of example project)
+## Example projects in solution
+* One example of a .net core console application polling updates from bot api through '/getUpdates'
+* One example of a .net core web application setting webhook that receives updates and reply to the sender.
+
+### Example code for setting up webhook, see example project in solution
 ```cs
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
@@ -37,7 +41,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-## Example code receving webhook update and sending message (From controller in example project)
+### Example code receving webhook update and sending a replying message, see example project in solution
 ```cs
 [Route("api/[controller]")]
 public class TelegramController : Controller
