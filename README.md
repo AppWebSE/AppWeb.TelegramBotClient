@@ -23,7 +23,7 @@ Read more at: https://core.telegram.org/bots/api#setwebhook
 * One example of a .net core console application polling updates from bot api through '/getUpdates'
 * One example of a .net core web application setting webhook that receives updates and reply to the sender.
 
-### Example code for setting up webhook, see example project in solution
+**Example code for setting up webhook, see example project in solution**
 ```cs
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
@@ -46,7 +46,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-### Example code receving webhook update and sending a replying message, see example project in solution
+**Example code receving webhook update and sending a replying message, see example project in solution**
 ```cs
 [Route("api/[controller]")]
 public class TelegramController : Controller
