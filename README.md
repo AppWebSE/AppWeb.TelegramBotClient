@@ -1,5 +1,6 @@
 # Telegram-Bot-API-Client
 This is a .Net Standard C# client for communication with the Telegram Bot API.
+Webhook web application runs .Net Core 2.1
 
 You will find Telegram bot api documentation at:
 * https://core.telegram.org/bots
