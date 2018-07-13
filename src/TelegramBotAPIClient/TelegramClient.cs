@@ -12,28 +12,35 @@ namespace TelegramBotAPIClient
     public class TelegramClient : ITelegramClient
     {
         private readonly IHttpService _httpService;
+        private string AuthenticationToken { get; set; }
 
-        public TelegramClientConfiguration Configuration;
-        public TelegramClientConfiguration GetConfiguration()
+        private string BaseUrl => $"https://api.telegram.org/bot{AuthenticationToken}";
+
+        public TelegramClient()
         {
-            return Configuration;
-        }
-
-        public TelegramClient(string authenticationToken)
-        {
-            if (!Regex.IsMatch(authenticationToken, @"^\d*:[\w\d-_]{35}$"))
-                throw new ArgumentException("Invalid token format", nameof(authenticationToken));
-
-            string apiBaseUrl = $"https://api.telegram.org/bot{authenticationToken}";
-            Configuration = new TelegramClientConfiguration(authenticationToken);
-            _httpService = new HttpService(apiBaseUrl, TelegramClientConfiguration.SerializerSettings);
+            _httpService = new HttpService(TelegramClientConfiguration.SerializerSettings);
         }
         
+        public void SetAuthenticationToken(string authenticationToken)
+        {
+            if (string.IsNullOrEmpty(authenticationToken) || !Regex.IsMatch(authenticationToken, @"^\d*:[\w\d-_]{35}$"))
+            {
+                throw new ArgumentException("Invalid token format", nameof(authenticationToken));
+            }
+
+            AuthenticationToken = authenticationToken;
+        }
+
+        public string GetAuthenticationToken()
+        {
+            return AuthenticationToken;
+        }
+
         public Message SendMessage(long chat_id, string text)
         {
             if (string.IsNullOrEmpty(text)) throw new Exception("");
 
-            var endpoint = $"/sendMessage?chat_id={chat_id}&text={text}";
+            var endpoint = $"{BaseUrl}/sendMessage?chat_id={chat_id}&text={text}";
 
             return _httpService.GetWebApi<Message>(endpoint);
         }
@@ -49,8 +56,13 @@ namespace TelegramBotAPIClient
             if (allowedUpdates != null && !allowedUpdates.Contains(UpdateType.All))
                 parameters.Add("allowed_updates", allowedUpdates);
             
-            return _httpService.PostWebApi<Update[]>(parameters, "/getUpdates");
+            return _httpService.PostWebApi<Update[]>(parameters, $"{BaseUrl}/getUpdates");
             
+        }
+
+        public void DeleteWebhook()
+        {
+            _httpService.GetWebApi($"{BaseUrl}/deleteWebhook");
         }
 
         public bool SetWebhook(string url, int maxConnections, UpdateType[] allowedUpdates = null)
@@ -64,7 +76,7 @@ namespace TelegramBotAPIClient
             if (allowedUpdates != null && !allowedUpdates.Contains(UpdateType.All))
                 parameters.Add("allowed_updates", allowedUpdates);
 
-            return _httpService.PostWebApi<bool>(parameters, "/setWebhook");
+            return _httpService.PostWebApi<bool>(parameters, $"{BaseUrl}/setWebhook");
         }
     }
 }

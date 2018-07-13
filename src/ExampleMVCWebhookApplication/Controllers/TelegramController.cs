@@ -22,7 +22,7 @@ namespace TelegramBotApiClient.ExampleMVCWebhookApplication.Controllers
         [HttpPost("update/{token}")]
         public void Update([FromRoute]string token, [FromBody]Update update)
         {
-            if (token != _telegramClient.GetConfiguration().AuthenticationToken)
+            if (token != _telegramClient.GetAuthenticationToken())
                 return;
 
             if(update != null && update.Message != null)

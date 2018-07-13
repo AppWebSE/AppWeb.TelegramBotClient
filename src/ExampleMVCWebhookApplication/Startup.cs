@@ -33,9 +33,14 @@ namespace TelegramBotApiClient.ExampleMVCWebhookApplication
             services.AddMvc();
 
             // Setup telegram client
-            var accessToken = Configuration["Settings:accessToken"];
-            TelegramClient telegramClient = new TelegramClient(accessToken);
-            
+            TelegramClient telegramClient = new TelegramClient();
+
+            var authenticationToken = Configuration["Settings:authenticationToken"];
+            if (!string.IsNullOrEmpty(authenticationToken))
+            {
+                telegramClient.SetAuthenticationToken(authenticationToken);
+            }
+
             // Set up webhook
             string webhookUrl = Configuration["Settings:webhookUrl"];
             int maxConnections = int.Parse(Configuration["Settings:maxConnections"]);

@@ -10,15 +10,13 @@ namespace TelegramBotAPIClient.Services
 {
     public class HttpService : IHttpService, IDisposable
     {
-        private readonly string _baseUrl;
         private readonly HttpClient _httpClient;
         private readonly JsonSerializerSettings _serializerSettings;
 
-        public HttpService(string baseUrl, JsonSerializerSettings serializerSettings, HttpClient httpClient = null)
+        public HttpService(JsonSerializerSettings serializerSettings, HttpClient httpClient = null)
         {
             _httpClient = httpClient ?? new HttpClient();
             _httpClient.Timeout = new TimeSpan(0, 0, 10); //10 second timeout, make this an configuration
-            _baseUrl = baseUrl.TrimEnd('/');
             _serializerSettings = serializerSettings;
         }
 
@@ -26,7 +24,7 @@ namespace TelegramBotAPIClient.Services
         {
             try
             {
-                var response = _httpClient.GetAsync(_baseUrl + apiUrl).Result;
+                var response = _httpClient.GetAsync(apiUrl).Result;
                 response.EnsureSuccessStatusCode();
             }
             catch (Exception e)
@@ -39,7 +37,7 @@ namespace TelegramBotAPIClient.Services
         {
             try
             {
-                var response = _httpClient.GetAsync(_baseUrl + apiUrl).Result;
+                var response = _httpClient.GetAsync(apiUrl).Result;
                 response.EnsureSuccessStatusCode();
                 
                 var responseString = response.Content.ReadAsStringAsync().Result;
@@ -57,7 +55,7 @@ namespace TelegramBotAPIClient.Services
         {
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, _baseUrl + apiUrl);
+                var request = new HttpRequestMessage(HttpMethod.Post, apiUrl);
 
                 using (var content = new StringContent(JsonConvert.SerializeObject(data, _serializerSettings), Encoding.UTF8, "application/json"))
                 {
@@ -78,7 +76,7 @@ namespace TelegramBotAPIClient.Services
         {
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, _baseUrl + apiUrl);
+                var request = new HttpRequestMessage(HttpMethod.Post, apiUrl);
 
                 using (var content = new StringContent(JsonConvert.SerializeObject(data, _serializerSettings), Encoding.UTF8, "application/json"))
                 {
