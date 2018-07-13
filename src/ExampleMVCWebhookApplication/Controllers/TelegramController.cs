@@ -30,6 +30,5 @@ namespace TelegramBotApiClient.ExampleMVCWebhookApplication.Controllers
             
             return;
         }
-        
     }
 }

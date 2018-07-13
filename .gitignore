@@ -2,5 +2,3 @@
 /src/.vs/**/*
 /src/*/bin/*
 /src/*/obj/*
-/src/TelegramBotApiClient.ExampleConsoleApplication/appsettings.json
-/src/TelegramBotApiClient.ExampleMVCWebhookApplication/appsettings.json
