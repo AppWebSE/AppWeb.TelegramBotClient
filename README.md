@@ -12,7 +12,7 @@ You will find Telegram bot api documentation at:
 * '/setWebhook' updates what webhook settings should be used.
 * '/deleteWebhook' deletes your webhook configuration and you have to use /getUpdates instead
 
-## Note!
+## Important Note!
 If '/setWebhook' is used you cannot receive updates through polling '/getUpdates' due to limitations in telegram bot api. You will also have to use a HTTPS connection for your webhook.
 Read more at: https://core.telegram.org/bots/api#setwebhook
 
@@ -20,6 +20,17 @@ Read more at: https://core.telegram.org/bots/api#setwebhook
 * Implement more telegram bot api endpoints
 * Nuget package
 * Add tests
+
+## Coommand line tool for controling and test your bot
+The provided project TelegramBotApiCMD provides you with tooling using the TelegramBotApiClient, using this you can tast and configure your bot.
+
+**Available commands:**
+* `exit` to exit application
+* `getupdates` to receive messages
+* `help` for help
+* `deletewebhook` to delete webhook configuration
+* `setwebhook <webhookUrl>` to configure webhook
+* `settoken <token>` to set token for current session
 
 ## Example projects in solution
 * One example of a .net core console application polling updates from bot api through '/getUpdates', it can also be used as a tool to configure your bot and read/send messages
