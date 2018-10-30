@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Mattias Andersson</Authors>
+    <Company>AppWeb</Company>
+    <Description>.Net Standard Telegram Bot Api Client client for communication with the Telegram Bot API. Example webhook web application runs .Net Core 2.1, also includes a example command line tool.</Description>
+    <PackageLicenseUrl>https://github.com/amattias/AppWeb.TelegramBotClient/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/amattias/AppWeb.TelegramBotClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/amattias/AppWeb.TelegramBotClient</RepositoryUrl>
+    <PackageTags>Telegram Bot Api Client Webhook Command Line</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+</Project>
