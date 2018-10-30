@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using TelegramBotAPIClient.Converters;
+using AppWeb.TelegramBotClient.Converters;
 
-namespace TelegramBotAPIClient.Models
+namespace AppWeb.TelegramBotClient.Models
 {
     /// <summary>
     /// This object represents a message.

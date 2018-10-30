@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TelegramBotAPIClient;
+using AppWeb.TelegramBotClient;
 using Newtonsoft.Json;
-using TelegramBotAPIClient.Models;
-using TelegramBotAPIClient.Configurations;
+using AppWeb.TelegramBotClient.Models;
+using AppWeb.TelegramBotClient.Configurations;
 
-namespace TelegramBotApiClient.ExampleMVCWebhookApplication.Controllers
+namespace AppWeb.TelegramBotClient.Webhook.Controllers
 {
     [Route("api/[controller]")]
     public class TelegramController : Controller

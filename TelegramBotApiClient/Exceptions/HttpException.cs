@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TelegramBotAPIClient.Exceptions
+namespace AppWeb.TelegramBotClient.Exceptions
 {
     public class HttpException : Exception
     {

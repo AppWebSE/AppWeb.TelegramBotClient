@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using TelegramBotAPIClient.Enums;
+using AppWeb.TelegramBotClient.Enums;
 
-namespace TelegramBotAPIClient.Models
+namespace AppWeb.TelegramBotClient.Models
 {
     /// <summary>
     /// This object represents a chat.

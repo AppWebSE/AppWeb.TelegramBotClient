@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace TelegramBotAPIClient.Enums
+namespace AppWeb.TelegramBotClient.Enums
 {
     /// <summary>
     /// Type of a <see cref="Chat"/>

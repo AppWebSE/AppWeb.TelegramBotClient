@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TelegramBotAPIClient.Helpers
+namespace AppWeb.TelegramBotClient.Helpers
 {
     /// <summary>
     /// Extension Methods

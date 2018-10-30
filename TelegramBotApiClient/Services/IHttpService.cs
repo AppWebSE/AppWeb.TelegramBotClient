@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TelegramBotAPIClient.Services
+namespace AppWeb.TelegramBotClient.Services
 {
     public interface IHttpService
     {

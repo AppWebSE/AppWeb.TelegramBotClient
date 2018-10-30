@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace TelegramBotAPIClient.Models
+namespace AppWeb.TelegramBotClient.Models
 {
     /// <summary>
     /// The Api Response

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace TelegramBotAPIClient.Models
+namespace AppWeb.TelegramBotClient.Models
 {
     /// <summary>
     /// Collection of fileIds of profile pictures of a chat.

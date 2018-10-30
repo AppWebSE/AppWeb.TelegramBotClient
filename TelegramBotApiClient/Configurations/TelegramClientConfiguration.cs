@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using TelegramBotAPIClient.Converters;
+using AppWeb.TelegramBotClient.Converters;
 
-namespace TelegramBotAPIClient.Configurations
+namespace AppWeb.TelegramBotClient.Configurations
 {
     public class TelegramClientConfiguration
     {

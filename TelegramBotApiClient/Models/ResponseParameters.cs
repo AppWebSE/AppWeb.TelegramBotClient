@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace TelegramBotAPIClient.Models
+namespace AppWeb.TelegramBotClient.Models
 {
     /// <summary>
     /// Contains information about why a request was unsuccessful.

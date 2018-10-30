@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TelegramBotApiClient.Tests
+namespace AppWeb.TelegramBotClient.Tests
 {
     [TestClass]
     public class UnitTest1

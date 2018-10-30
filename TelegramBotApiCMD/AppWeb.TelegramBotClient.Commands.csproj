@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TelegramBotAPIClient\TelegramBotAPIClient.csproj" />
+    <ProjectReference Include="..\TelegramBotApiClient\AppWeb.TelegramBotClient.csproj" />
   </ItemGroup>
 
   <ItemGroup>

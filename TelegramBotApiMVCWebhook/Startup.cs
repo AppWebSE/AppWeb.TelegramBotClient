@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using TelegramBotAPIClient;
-using TelegramBotAPIClient.Enums;
+using AppWeb.TelegramBotClient;
+using AppWeb.TelegramBotClient.Enums;
 
-namespace TelegramBotApiClient.ExampleMVCWebhookApplication
+namespace AppWeb.TelegramBotClient.Webhook
 {
     public class Startup
     {

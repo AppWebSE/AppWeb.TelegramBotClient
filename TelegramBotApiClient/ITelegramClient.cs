@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
-using TelegramBotAPIClient.Configurations;
-using TelegramBotAPIClient.Enums;
-using TelegramBotAPIClient.Models;
+using AppWeb.TelegramBotClient.Configurations;
+using AppWeb.TelegramBotClient.Enums;
+using AppWeb.TelegramBotClient.Models;
 
-namespace TelegramBotAPIClient
+namespace AppWeb.TelegramBotClient
 {
     public interface ITelegramClient
     {

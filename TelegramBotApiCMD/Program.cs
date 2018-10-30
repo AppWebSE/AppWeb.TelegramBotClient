@@ -1,11 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
-using TelegramBotAPIClient;
-using TelegramBotAPIClient.Enums;
-using TelegramBotAPIClient.Models;
+using AppWeb.TelegramBotClient.Enums;
+using AppWeb.TelegramBotClient.Models;
 
-namespace TelegramBotApiClient.ExampleUsage
+namespace AppWeb.TelegramBotClient.Commands
 {
     public class Program
     {

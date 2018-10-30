@@ -2,11 +2,11 @@
 using System;
 using System.Net.Http;
 using System.Text;
-using TelegramBotAPIClient.Configurations;
-using TelegramBotAPIClient.Exceptions;
-using TelegramBotAPIClient.Models;
+using AppWeb.TelegramBotClient.Configurations;
+using AppWeb.TelegramBotClient.Exceptions;
+using AppWeb.TelegramBotClient.Models;
 
-namespace TelegramBotAPIClient.Services
+namespace AppWeb.TelegramBotClient.Services
 {
     public class HttpService : IHttpService, IDisposable
     {

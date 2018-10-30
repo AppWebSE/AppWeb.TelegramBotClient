@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
-using TelegramBotAPIClient.Helpers;
+using AppWeb.TelegramBotClient.Helpers;
 
-namespace TelegramBotAPIClient.Converters
+namespace AppWeb.TelegramBotClient.Converters
 {
     internal class UnixDateTimeConverter : DateTimeConverterBase
     {

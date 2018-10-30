@@ -1,13 +1,13 @@
 ﻿using System;
-using TelegramBotAPIClient.Services;
-using TelegramBotAPIClient.Configurations;
-using TelegramBotAPIClient.Models;
+using AppWeb.TelegramBotClient.Services;
+using AppWeb.TelegramBotClient.Configurations;
+using AppWeb.TelegramBotClient.Models;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
-using TelegramBotAPIClient.Enums;
+using AppWeb.TelegramBotClient.Enums;
 using System.Linq;
 
-namespace TelegramBotAPIClient
+namespace AppWeb.TelegramBotClient
 {
     public class TelegramClient : ITelegramClient
     {
