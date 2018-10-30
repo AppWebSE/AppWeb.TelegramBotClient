@@ -17,7 +17,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TelegramBotApiClient\AppWeb.TelegramBotClient.csproj" />
+    <ProjectReference Include="..\AppWeb.TelegramBotClient\AppWeb.TelegramBotClient.csproj" />
   </ItemGroup>
 
 </Project>

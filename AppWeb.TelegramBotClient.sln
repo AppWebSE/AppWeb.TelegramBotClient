@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient", "TelegramBotApiClient\AppWeb.TelegramBotClient.csproj", "{7B546984-8C4E-4D34-8B31-9235148DA5B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient", "AppWeb.TelegramBotClient\AppWeb.TelegramBotClient.csproj", "{7B546984-8C4E-4D34-8B31-9235148DA5B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient.Commands", "TelegramBotApiCMD\AppWeb.TelegramBotClient.Commands.csproj", "{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient.Commands", "AppWeb.TelegramBotClient.Commands\AppWeb.TelegramBotClient.Commands.csproj", "{753FF498-BAE1-4758-A9F8-BAD517A6BAAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient.Tests", "TelegramBotApiClient.Tests\AppWeb.TelegramBotClient.Tests.csproj", "{0245AED0-B2D8-4178-89D3-7AA80AE60735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient.Tests", "AppWeb.TelegramBotClient.Tests\AppWeb.TelegramBotClient.Tests.csproj", "{0245AED0-B2D8-4178-89D3-7AA80AE60735}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient.Webhook", "TelegramBotApiMVCWebhook\AppWeb.TelegramBotClient.Webhook.csproj", "{60C6160E-214A-47D2-9EF9-38F70E1ED22A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWeb.TelegramBotClient.Webhook", "AppWeb.TelegramBotClient.Webhook\AppWeb.TelegramBotClient.Webhook.csproj", "{60C6160E-214A-47D2-9EF9-38F70E1ED22A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FA8F813-C9A7-420C-9C91-100F832B7509}"
 	ProjectSection(SolutionItems) = preProject
