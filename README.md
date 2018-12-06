@@ -1,5 +1,8 @@
 # AppWeb.TelegramBotClient
-This is a .Net Standard client for communication with the Telegram Bot API. The client is available through a nuget.
+This is a .Net Standard client for communication with the Telegram Bot API. 
+The client is available through a nuget.
+
+Project url: https://appweb.se/en/packages/telegram-bot-client
 
 You will find Telegram bot api documentation at:
 * https://core.telegram.org/bots
