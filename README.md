@@ -30,7 +30,7 @@ Read more at: https://core.telegram.org/bots/api#setwebhook
 * Add tests
 
 ## Coommand line tool for controling and test your bot
-The provided project TelegramBotApiCMD provides you with tooling using the TelegramBotApiClient, using this you can tast and configure your bot.
+The provided project TelegramBotApiCMD provides you with tooling using the TelegramBotApiClient, using this you can test and configure your bot.
 
 **Available commands:**
 * `exit` to exit application
@@ -69,7 +69,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-**Example code receving webhook update and sending a replying message, see example project in solution**
+**Example code receiving webhook update and sending a replying message, see example project in solution**
 ```cs
 [Route("api/[controller]")]
 public class TelegramController : Controller
